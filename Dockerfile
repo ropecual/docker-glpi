@@ -18,6 +18,7 @@ php-xmlrpc \
 php-imap \
 curl \
 php-curl \
+vim \
 php-gd \
 php-mbstring \
 php-xml \

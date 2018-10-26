@@ -41,10 +41,10 @@ service cron start
 
 echo 	"<?php" > /opt/config_db.php
 echo	"class DB extends DBmysql {" >> /opt/config_db.php
-echo	"public \$dbhost     = $MYSQL_ROOT_PASSWORD;" >> /opt/config_db.php
-echo	"public \$dbuser     = $MYSQL_USER;" >> /opt/config_db.php
-echo	"public \$dbpassword = $MYSQL_PASSWORD;" >> /opt/config_db.php
-echo	"public \$dbdefault  = $MYSQL_DATABASE;" >> /opt/config_db.php
+echo	"public \$dbhost     = '$MYSQL_ROOT_PASSWORD';" >> /opt/config_db.php
+echo	"public \$dbuser     = '$MYSQL_USER';" >> /opt/config_db.php
+echo	"public \$dbpassword = '$MYSQL_PASSWORD';" >> /opt/config_db.php
+echo	"public \$dbdefault  = '$MYSQL_DATABASE';" >> /opt/config_db.php
 echo 	"}" >> /opt/config_db.php
 
 cp /opt/config_db.php /var/www/html/glpi/config/config_db.php
