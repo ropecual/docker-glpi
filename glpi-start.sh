@@ -39,7 +39,7 @@ echo "*/2 * * * * www-data /usr/bin/php /var/www/html/glpi/front/cron.php &>/dev
 #Start cron service
 service cron start
 
-echo 	"<?php" >> /opt/config_db.php
+echo 	"<?php" > /opt/config_db.php
 echo	"class DB extends DBmysql {" >> /opt/config_db.php
 echo	"public \$dbhost     = $MYSQL_ROOT_PASSWORD;" >> /opt/config_db.php
 echo	"public \$dbuser     = $MYSQL_USER;" >> /opt/config_db.php
