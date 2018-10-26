@@ -38,7 +38,7 @@ echo -e "<VirtualHost *:80>\n\tDocumentRoot /var/www/html/glpi\n\n\t<Directory /
 echo "*/2 * * * * www-data /usr/bin/php /var/www/html/glpi/front/cron.php &>/dev/null" >> /etc/cron.d/glpi
 #Start cron service
 service cron start
-
+cp /opt/config_db.php /var/www/html/glpi/config/config_db.php
 #Activation du module rewrite d'apache
 a2enmod rewrite && service apache2 restart && service apache2 stop
 

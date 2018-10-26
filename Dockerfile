@@ -37,7 +37,7 @@ COPY glpi-start.sh /opt/
 RUN chmod +x /opt/glpi-start.sh
 ENTRYPOINT ["/opt/glpi-start.sh"]
 
-COPY config_db.php /var/www/html/glpi/config/
+COPY config_db.php /opt/
 
 #Exposition des ports
 EXPOSE 80 443
