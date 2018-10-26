@@ -48,6 +48,9 @@ echo	"public \$dbdefault  = '$MYSQL_DATABASE';" >> /opt/config_db.php
 echo 	"}" >> /opt/config_db.php
 
 cp /opt/config_db.php /var/www/html/glpi/config/config_db.php
+
+
+rm -rf /var/www/html/glpi/install
 #Activation du module rewrite d'apache
 a2enmod rewrite && service apache2 restart && service apache2 stop
 
